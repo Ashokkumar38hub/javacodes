@@ -1,0 +1,48 @@
+public class Main {
+    static void  mulstr(String s){
+        int i=s.length()-1;
+        int j=0;
+        char d1;
+        String res="";
+        int d2=0;
+        StringBuilder val=new StringBuilder();
+        while(j<=i){
+            d1=s.charAt(j);
+            if(Character.isDigit(d1)){
+                d2=d1-'0';
+                mul(d2,res,val);
+                res="";
+            }
+            else{
+                res=res+d1;
+            }
+            j++;
+        }
+        val.append(res);
+       System.out.println(val);
+    }
+    static void mul(int d2, String res,StringBuilder val){
+       
+        for(int i=1;i<=d2;i++){
+            val.append(res);
+        }
+    }
+    public static void main(String[] args) {
+        mulstr("t6hj7ui");
+    }
+}
+
+
+On Tue, 4 Mar 2025 at 15:59, Ashok Kumar <ashokkumarhicet@gmail.com> wrote:
+public class ReverseString {
+    public static void main(String[] args) {
+        String a = "I      Love   Java Programmig";
+        String[] b = a.trim().split("\\s+");
+        StringBuilder temp = new StringBuilder();
+        for (int i = b.length - 1; i >= 0; i--) {
+            temp.append(b[i]).append(" ");
+        }
+       
+        System.out.println(temp.toString().trim());
+    }
+}
